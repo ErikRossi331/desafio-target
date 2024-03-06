@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+
+<body>
+<script>
+  function isFibonacci(number) {
+    let a = 0;
+    let b = 1;
+    let next = a + b;
+    
+    while (next <= number) {
+        if (next === number) {
+            return true;
+        }
+        a = b;
+        b = next;
+        next = a + b;
+    }
+    
+    return false;
+}
+
+const inputNumber = parseInt(prompt("Informe um número:"));
+
+if (isNaN(inputNumber)) {
+    document.write("Por favor, informe um número válido.");
+} else {
+    if (isFibonacci(inputNumber)) {
+        document.write(inputNumber + " pertence à sequência de Fibonacci.");
+    } else {
+        document.write(inputNumber + " não pertence à sequência de Fibonacci.");
+    }
+}
+
+</script>
+</body>
+
+</html>
+
+
+
